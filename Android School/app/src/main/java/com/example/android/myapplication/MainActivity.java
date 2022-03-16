@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
      *  define an arraylist named students
      */
 
-
+    ArrayList<Student> studentList = new ArrayList<>(4);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.studentListView);
 
-        /**
-         *  إكتبوا الكود بعد هذا السطر
-         *  ضيفوا عناصر من الكلاس
-         *  add objects from class Student
-         */
-
         Student s1 = new Student("عبدالله", 20, 86, R.drawable.boy);
-        StudentAdapter studentAdapter = new StudentAdapter(this,0,students);
+        Student s2 = new Student("ماجد", 22, 12, R.drawable.boy1);
+        Student s3 = new Student("يوسف", 21, 44, R.drawable.boy2);
+        Student s4 = new Student("رهف", 124, 100, R.drawable.girl);
+
+       studentList.add(s1);
+       studentList.add(s2);
+       studentList.add(s3);
+       studentList.add(s4);
+
+       StudentAdapter studentAdapter = new StudentAdapter(this,0,studentList);
 
 
         listView.setAdapter(studentAdapter);
