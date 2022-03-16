@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
      *  عرفوا مصفوفة بإسم students
      *  define an arraylist named students
      */
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
          *  add objects from class Student
          */
 
-
+        Student s1 = new Student("عبدالله", 20, 86, R.drawable.boy);
         StudentAdapter studentAdapter = new StudentAdapter(this,0,students);
 
 
